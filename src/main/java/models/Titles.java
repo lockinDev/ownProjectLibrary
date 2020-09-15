@@ -2,45 +2,52 @@ package models;
 
 import java.util.*;
 
+import dal.*;
+
 // Adapter class  for Title
 public class Titles 
 {
-  /**
-   * Returns all titles.
-   * @return All titles
-   */
+  
   public static List<Title> getAll()
   {
-    throw new UnsupportedOperationException();
+    return TitleData.getTitles();
   }
   
-
+  
   public static Title getTitle(int id)
   {
     throw new UnsupportedOperationException();
   }
 
- 
+    
   public static boolean exists(String name)
   {
-    throw new UnsupportedOperationException();
+    return TitleData.exists(name);
   }
 
-
+  
   public static Title insert(String name)
   {
-    throw new UnsupportedOperationException();
+    name = Db.cut(name, Title.NAME);
+    return TitleData.insert(name);
   }
   
-
+  
   public static boolean update(Title title)
   {
-    throw new UnsupportedOperationException();
+    title.setName(Db.cut(title.getName(), Title.NAME));
+    return TitleData.update(title);
   }
   
-
+  
   public static boolean delete(int id)
   {
-    throw new UnsupportedOperationException();
+    return TitleData.delete(id);
+  }
+  
+  
+  public static Title createAdmin()
+  {
+    return TitleData.createAdmin();
   }
 }

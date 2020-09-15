@@ -14,8 +14,8 @@ public class Book
   private String title;                               // the book's title
   private Integer edition;                            // the book's edition
   private Integer year;                               // the book's publisher year
-  private Integer pages;                              // the book's number  pages
-  private Integer copies;                             // number of copies  this book
+  private Integer pages;                              // the book's number og pages
+  private Integer copies;                             // number of copies og this book
   private String text;                                // a description of the book
   private Category category;                          // the book's category
   private Publisher publisher;                        // the book's publisher

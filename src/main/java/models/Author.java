@@ -9,7 +9,7 @@ public class Author
   private int id;               // the author's id
   private String firstname;     // the author's first name
   private String lastname;      // the author's last name
-  private String text;         
+  private String text;          // e possible description of the author
   
   public Author(int id, String firstname, String lastname)
   {
